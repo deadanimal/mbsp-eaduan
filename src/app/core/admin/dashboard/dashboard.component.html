@@ -1,0 +1,519 @@
+<div class=" header bg-secondary pb-6">
+  <div class=" container-fluid">
+    <div class=" header-body">
+      <div class=" row align-items-center py-4">
+        <div class=" col-lg-6 col-7">
+          <h6 class=" h2 text-dark d-inline-block mb-0">Dashboard</h6>
+        </div>
+
+
+      </div>
+
+      <div class=" row">
+        <div class=" col-xl-3 col-md-6">
+          <div class=" card card-stats">
+            <div class=" card-body">
+              <div class=" row">
+                <div class=" col">
+                  <h5 class=" card-title text-uppercase text-muted mb-0">
+                    Aduan
+                  </h5>
+
+                  <span class=" h2 font-weight-bold mb-0"> 1897 </span>
+                </div>
+
+                <div class=" col-auto">
+                  <div
+                    class=" icon icon-shape bg-gradient-red text-white rounded-circle shadow"
+                  >
+                    <i class=" ni ni-active-40"> </i>
+                  </div>
+                </div>
+              </div>
+
+              <p class=" mt-3 mb-0 text-sm">
+                <span class=" text-success mr-2">
+                  <i class=" fa fa-arrow-up"> </i> 3.48%
+                </span>
+
+                <span class=" text-nowrap"> Sejak bulan lepas </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class=" col-xl-3 col-md-6">
+          <div class=" card card-stats">
+            <div class=" card-body">
+              <div class=" row">
+                <div class=" col">
+                  <h5 class=" card-title text-uppercase text-muted mb-0">
+                    ADUAN SELESAI
+                  </h5>
+
+                  <span class=" h2 font-weight-bold mb-0"> 956 </span>
+                </div>
+
+                <div class=" col-auto">
+                  <div
+                    class=" icon icon-shape bg-gradient-orange text-white rounded-circle shadow"
+                  >
+                    <i class=" ni ni-chart-pie-35"> </i>
+                  </div>
+                </div>
+              </div>
+
+              <p class=" mt-3 mb-0 text-sm">
+                <span class=" text-success mr-2">
+                  <i class=" fa fa-arrow-up"> </i> 3.48%
+                </span>
+
+                <span class=" text-nowrap"> Sejak bulan lepas </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class=" col-xl-3 col-md-6">
+          <div class=" card card-stats">
+            <div class=" card-body">
+              <div class=" row">
+                <div class=" col">
+                  <h5 class=" card-title text-uppercase text-muted mb-0">
+                    DALAM TINDAKAN
+                  </h5>
+
+                  <span class=" h2 font-weight-bold mb-0"> 124 </span>
+                </div>
+
+                <div class=" col-auto">
+                  <div
+                    class=" icon icon-shape bg-gradient-green text-white rounded-circle shadow"
+                  >
+                    <i class=" ni ni-money-coins"> </i>
+                  </div>
+                </div>
+              </div>
+
+              <p class=" mt-3 mb-0 text-sm">
+                <span class=" text-success mr-2">
+                  <i class=" fa fa-arrow-up"> </i> 3.48%
+                </span>
+
+                <span class=" text-nowrap"> Sejak bulan lepas </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class=" col-xl-3 col-md-6">
+          <div class=" card card-stats">
+            <div class=" card-body">
+              <div class=" row">
+                <div class=" col">
+                  <h5 class=" card-title text-uppercase text-muted mb-0">
+                    PRESTASI
+                  </h5>
+
+                  <span class=" h2 font-weight-bold mb-0"> 49.65% </span>
+                </div>
+
+                <div class=" col-auto">
+                  <div
+                    class=" icon icon-shape bg-gradient-info text-white rounded-circle shadow"
+                  >
+                    <i class=" ni ni-chart-bar-32"> </i>
+                  </div>
+                </div>
+              </div>
+
+              <p class=" mt-3 mb-0 text-sm">
+                <span class=" text-success mr-2">
+                  <i class=" fa fa-arrow-up"> </i> 3.48%
+                </span>
+
+                <span class=" text-nowrap"> Sejak bulan lepas </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid mt--6">
+  <div class="row">
+    <div class="col-xl-8">
+      <div class="card">
+        <div class="card-header bg-secondary">
+          <div class="row align-items-center">
+            <div class="col">
+              <h6 class="text-uppercase ls-1 mb-1">Carta</h6>
+
+              <h5 class="h3 mb-0">Top 10 Kategori Aduan</h5>
+            </div>
+
+            <div class="col">
+              <ul class="nav nav-pills justify-content-end">
+                <li
+                  class="nav-item mr-2 mr-md-0"
+                  data-toggle="chart"
+                  data-target="#chart-sales"
+                  (click)="data = datasets[0]; updateOptions()"
+                >
+                  <a
+                    href="javascript:void(0)"
+                    class="nav-link py-2 px-3 bg-primary"
+                    [ngClass]="{ active: clicked === true }"
+                    data-toggle="tab"
+                  >
+                    <span class="d-none d-md-block text-white">Tahun</span>
+                    <span class="d-md-none">Y</span>
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
+                  data-toggle="chart"
+                  data-target="#chart-sales"
+                >
+                  <a
+                    href="javascript:void(0)"
+                    class="nav-link py-2 px-3 bg-primary"
+                    [ngClass]="{ active: clicked1 === true }"
+                    data-toggle="tab"
+                    (click)="clicked = false; clicked1 = true"
+                  >
+                    <span class="d-none d-md-block text-white">Bulan</span>
+                    <span class="d-md-none">M</span>
+                  </a>
+                </li>
+                <li
+                  class="nav-item mr-2 mr-md-0"
+                  data-toggle="chart"
+                  data-target="#chart-sales"
+                  (click)="data = datasets[0]; updateOptions()"
+                >
+                  <a
+                    href="javascript:void(0)"
+                    class="nav-link py-2 px-3 bg-primary"
+                    [ngClass]="{ active: clicked === true }"
+                    data-toggle="tab"
+                  >
+                    <span class="d-none d-md-block text-white">Minggu</span>
+                    <span class="d-md-none">w</span>
+                  </a>
+                </li>
+                <li
+                  class="nav-item mr-2 mr-md-0"
+                  data-toggle="chart"
+                  data-target="#chart-sales"
+                  (click)="data = datasets[0]; updateOptions()"
+                >
+                  <a
+                    href="javascript:void(0)"
+                    class="nav-link py-2 px-3 bg-primary"
+                    [ngClass]="{ active: clicked === true }"
+                    data-toggle="tab"
+                  >
+                    <span class="d-none d-md-block text-white">Hari</span>
+                    <span class="d-md-none">D</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class=" card-body">
+          <div class=" chart">
+            <fusioncharts
+            [width]="width"
+            [height]="height"
+            [type]="typeChartOne"
+            [dataFormat]="dataFormat"
+            [dataSource]="dataSourceChartOne"
+            >
+            </fusioncharts>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class=" col-xl-4">
+      <div class=" card">
+        <div class=" card-header bg-secondary">
+          <div class=" row align-items-center">
+            <div class=" col">
+              <h6 class=" text-uppercase ls-1 mb-1">Aduan</h6>
+
+              <h5 class=" h3 mb-0">Word Cloud</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class=" card-body">
+          <div class=" chart">
+            <ng-tag-cloud [config]="optionsCloud" [data]="dataCloud"></ng-tag-cloud>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class=" col-xl-4">
+      <div class=" card">
+        <div class=" card-header bg-secondary">
+          <div class=" row align-items-center">
+            <div class=" col">
+              <h6 class=" text-uppercase ls-1 mb-1">Trend</h6>
+
+              <h5 class=" h3 mb-0">Top 5 Aduan</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class=" card-body">
+          <div class=" chart">
+            <fusioncharts
+            [width]="width"
+            [height]="height"
+            [type]="typeChartTwo"
+            [dataFormat]="dataFormat"
+            [dataSource]="dataSourceChartTwo"
+            >
+            </fusioncharts>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-xl-8">
+      <div class="card">
+        <div class="card-header bg-secondary">
+          <div class="row align-items-center">
+            <div class="col">
+              <h6 class="text-uppercase ls-1 mb-1">Carta</h6>
+
+              <h5 class="h3 mb-0">Top 5 Jabatan</h5>
+            </div>
+
+            <div class="col">
+              <ul class="nav nav-pills justify-content-end">
+                <li
+                  class="nav-item mr-2 mr-md-0"
+                  data-toggle="chart"
+                  data-target="#chart-sales"
+                  (click)="data = datasets[0]; updateOptions()"
+                >
+                  <a
+                    href="javascript:void(0)"
+                    class="nav-link py-2 px-3 bg-primary"
+                    [ngClass]="{ active: clicked === true }"
+                    data-toggle="tab"
+                  >
+                    <span class="d-none d-md-block text-white">Tahun</span>
+                    <span class="d-md-none">Y</span>
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
+                  data-toggle="chart"
+                  data-target="#chart-sales"
+                >
+                  <a
+                    href="javascript:void(0)"
+                    class="nav-link py-2 px-3 bg-primary"
+                    [ngClass]="{ active: clicked1 === true }"
+                    data-toggle="tab"
+                    (click)="clicked = false; clicked1 = true"
+                  >
+                    <span class="d-none d-md-block text-white">Bulan</span>
+                    <span class="d-md-none">M</span>
+                  </a>
+                </li>
+                <li
+                  class="nav-item mr-2 mr-md-0"
+                  data-toggle="chart"
+                  data-target="#chart-sales"
+                  (click)="data = datasets[0]; updateOptions()"
+                >
+                  <a
+                    href="javascript:void(0)"
+                    class="nav-link py-2 px-3 bg-primary"
+                    [ngClass]="{ active: clicked === true }"
+                    data-toggle="tab"
+                  >
+                    <span class="d-none d-md-block text-white">Minggu</span>
+                    <span class="d-md-none">w</span>
+                  </a>
+                </li>
+                <li
+                  class="nav-item mr-2 mr-md-0"
+                  data-toggle="chart"
+                  data-target="#chart-sales"
+                  (click)="data = datasets[0]; updateOptions()"
+                >
+                  <a
+                    href="javascript:void(0)"
+                    class="nav-link py-2 px-3 bg-primary"
+                    [ngClass]="{ active: clicked === true }"
+                    data-toggle="tab"
+                  >
+                    <span class="d-none d-md-block text-white">Hari</span>
+                    <span class="d-md-none">D</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class=" card-body">
+          <div class=" chart">
+            <fusioncharts
+            [width]="width"
+            [height]="height"
+            [type]="typeChartThree"
+            [dataFormat]="dataFormat"
+            [dataSource]="dataSourceChartThree"
+            >
+            </fusioncharts>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class=" row">
+
+    <div class=" col-xl-4">
+      <div class=" card">
+        <div class=" card-header bg-secondary"><h5 class=" h3 mb-0">Senarai Kerja</h5></div>
+
+        <div class=" card-body p-0">
+          <ul class=" list-group list-group-flush" data-toggle="checklist">
+            <li
+              class=" checklist-entry list-group-item flex-column align-items-start py-4 px-4"
+            >
+              <div class=" checklist-item checklist-item-success">
+                <div class=" checklist-info">
+                  <h5 class=" checklist-title mb-0">Telefon JKR</h5>
+
+                  <small> 10:30 AM </small>
+                </div>
+
+                <div>
+                  <div
+                    class=" custom-control custom-checkbox custom-checkbox-success"
+                  >
+                    <input
+                      checked="checked"
+                      class=" custom-control-input"
+                      id="chk-todo-task-1"
+                      type="checkbox"
+                    />
+
+                    <label class=" custom-control-label" for="chk-todo-task-1">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class=" checklist-entry list-group-item flex-column align-items-start py-4 px-4"
+            >
+              <div class=" checklist-item checklist-item-warning">
+                <div class=" checklist-info">
+                  <h5 class=" checklist-title mb-0">Mesyuarat dengan PDRM</h5>
+
+                  <small> 10:30 AM </small>
+                </div>
+
+                <div>
+                  <div
+                    class=" custom-control custom-checkbox custom-checkbox-warning"
+                  >
+                    <input
+                      class=" custom-control-input"
+                      id="chk-todo-task-2"
+                      type="checkbox"
+                    />
+
+                    <label class=" custom-control-label" for="chk-todo-task-2">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class=" col-xl-4">
+      <div class=" card">
+        <div class=" card-header bg-secondary"><h5 class=" h3 mb-0">Trek Aduan</h5></div>
+
+        <div class=" card-body">
+          <ul class=" list-group list-group-flush list my--3">
+            <li class=" list-group-item px-0">
+              <div class=" row align-items-center">
+
+                <div class=" col">
+                  <h5>Dalam Tindakan</h5>
+
+                  <div class="progress-xs mb-0">
+                    <progressbar type="warning" [value]="60"> </progressbar>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class=" list-group-item px-0">
+              <div class=" row align-items-center">
+
+                <div class=" col">
+                  <h5>Selesai</h5>
+
+                  <div class="progress-xs mb-0">
+                    <progressbar type="success" [value]="100"> </progressbar>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class=" list-group-item px-0">
+              <div class=" row align-items-center">
+
+                <div class=" col">
+                  <h5>Rujuk Agensi Lain</h5>
+
+                  <div class="progress-xs mb-0">
+                    <progressbar type="danger" [value]="72"> </progressbar>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class=" list-group-item px-0">
+              <div class=" row align-items-center">
+
+                <div class=" col">
+                  <h5>Baru</h5>
+
+                  <div class="progress-xs mb-0">
+                    <progressbar type="info" [value]="90"> </progressbar>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

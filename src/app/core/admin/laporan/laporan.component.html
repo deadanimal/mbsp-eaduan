@@ -1,0 +1,184 @@
+<div class=" header bg-secondary pb-6">
+  <div class=" container-fluid">
+    <div class=" header-body">
+      <div class=" row align-items-center py-4">
+        <div class=" col-lg-6 col-7">
+          <h6 class=" h2 text-dark d-inline-block mb-0">Laporan</h6>
+        </div>
+
+        <div class=" col-lg-6 col-5 text-right">
+          <a class=" btn btn-sm btn-neutral" href="javascript:void(0)"> Muat Turun Excel </a>
+
+          <a class=" btn btn-sm btn-neutral" href="javascript:void(0)">
+            Muat Turun PDF
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid mt--6">
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="card">
+        <div class="card-header bg-secondary">
+          <div class="row align-items-center">
+            <div class="col">
+              <h6 class="text-uppercase ls-1 mb-1">Carta</h6>
+
+              <h5 class="h3 mb-0">Kepuasan Pengguna</h5>
+            </div>
+          </div>
+        </div>
+        <div class=" card-body">
+            <div class=" chart">
+              <fusioncharts
+              [width]="width"
+              [height]="height"
+              [type]="typeChartOne"
+              [dataFormat]="dataFormat"
+              [dataSource]="dataSourceChartOne"
+              >
+              </fusioncharts>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="card">
+        <div class="card-header bg-secondary">
+          <div class="row align-items-center">
+            <div class="col">
+              <h6 class="text-uppercase ls-1 mb-1">Carta</h6>
+
+              <h5 class="h3 mb-0">Prestasi Jabatan</h5>
+            </div>
+          </div>
+        </div>
+        <div class=" card-body">
+            <div class=" chart">
+              <fusioncharts
+              [width]="width"
+              [height]="height"
+              [type]="typeChartTwo"
+              [dataFormat]="dataFormat"
+              [dataSource]="dataSourceChartTwo"
+              >
+              </fusioncharts>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xl-6">
+      <div class="card">
+        <div class="card-header bg-secondary">
+          <div class="row align-items-center">
+            <div class="col">
+              <h6 class="text-uppercase ls-1 mb-1">Carta</h6>
+
+              <h5 class="h3 mb-0">Aduan Selesai</h5>
+            </div>
+          </div>
+        </div>
+        <div class=" card-body">
+            <div class=" chart">
+              <fusioncharts
+              [width]="width"
+              [height]="height"
+              [type]="typeChartThree"
+              [dataFormat]="dataFormat"
+              [dataSource]="dataSourceChartThree"
+              >
+              </fusioncharts>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="col-xl-6">
+      <div class="card">
+        <div class="card-header bg-secondary">
+          <div class="row align-items-center">
+            <div class="col">
+              <h6 class="text-uppercase ls-1 mb-1">Carta</h6>
+
+              <h5 class="h3 mb-0">Kategori Aduan</h5>
+            </div>
+          </div>
+        </div>
+        <div class=" card-body">
+            <div class=" chart">
+              <fusioncharts
+              [width]="width"
+              [height]="height"
+              [type]="typeChartFour"
+              [dataFormat]="dataFormat"
+              [dataSource]="dataSourceChartFour"
+              >
+              </fusioncharts>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="card">
+        <div class="card-header bg-secondary">
+          <div class="row align-items-center">
+            <div class="col">
+              <h6 class="text-uppercase ls-1 mb-1">Carta</h6>
+
+              <h5 class="h3 mb-0">Perbezaan Jumlah Aduan</h5>
+            </div>
+          </div>
+        </div>
+        <div class=" card-body">
+            <div class=" chart">
+              <fusioncharts
+              [width]="width"
+              [height]="height"
+              [type]="typeChartFive"
+              [dataFormat]="dataFormat"
+              [dataSource]="dataSourceChartFive"
+              >
+              </fusioncharts>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="card">
+        <div class="card-header bg-secondary">
+          <div class="row align-items-center">
+            <div class="col">
+              <h6 class="text-uppercase ls-1 mb-1">Carta</h6>
+
+              <h5 class="h3 mb-0">Perbezaan Purata</h5>
+            </div>
+          </div>
+        </div>
+        <div class=" card-body">
+            <div class=" chart">
+              <fusioncharts
+              [width]="width"
+              [height]="height"
+              [type]="typeChartSix"
+              [dataFormat]="dataFormat"
+              [dataSource]="dataSourceChartSix"
+              >
+              </fusioncharts>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

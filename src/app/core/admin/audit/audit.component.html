@@ -1,0 +1,98 @@
+<div class=" header bg-secondary pb-6">
+  <div class=" container-fluid">
+    <div class=" header-body">
+      <div class=" row align-items-center py-4">
+        <div class=" col-lg-6 col-7">
+          <h6 class=" h2 text-dark d-inline-block mb-0">Audit</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class=" container-fluid mt--6">
+
+  <div class=" row">
+    <div class=" col-xl-8">
+      <div class=" card">
+        <div class=" card-header border-0 bg-secondary">
+          <div class=" row align-items-center">
+            <div class=" col"><h3 class=" mb-0">Senarai Audit Trail</h3></div>
+
+            <div class=" col text-right">
+              <a class=" btn btn-sm btn-primary" href="javascript:void(0)">
+                Lihat semua
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class=" table-responsive">
+          <table class=" table align-items-center table-flush">
+            <thead class=" thead-light">
+              <tr>
+                <th scope="col">ID</th>
+
+                <th scope="col">Email</th>
+
+                <th scope="col">Aktiviti</th>
+
+                <th scope="col">IP</th>
+
+                <th scope="col">Tarikh</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr *ngFor="let data of loadedData">
+                <th scope="row">{{data.id}}</th>
+
+                <td>{{data.email}}</td>
+
+                <td>{{data.action}}</td>
+
+                <td>
+                  {{data.ip_address}}
+                </td>
+
+                <td>
+                  {{data.date}}
+                </td>
+              </tr>
+
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class=" col-xl-4">
+      <div class=" card">
+        <div class=" card-header border-0 bg-secondary">
+          <div class=" row align-items-center">
+            <div class=" col"><h3 class=" mb-0">Statistik Audit</h3></div>
+
+            <div class=" col text-right">
+              <a class=" btn btn-sm btn-primary" href="javascript:void(0)">
+                Lihat semua
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+            <div class="chart">
+                <fusioncharts
+                [width]="width"
+                [height]="height"
+                [type]="type"
+                [dataFormat]="dataFormat"
+                [dataSource]="dataSource"
+                >
+                </fusioncharts>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
