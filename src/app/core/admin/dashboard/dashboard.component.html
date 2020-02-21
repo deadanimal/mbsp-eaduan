@@ -23,9 +23,7 @@
                 </div>
 
                 <div class=" col-auto">
-                  <div
-                    class=" icon icon-shape bg-gradient-red text-white rounded-circle shadow"
-                  >
+                  <div class=" icon icon-shape bg-gradient-red text-white rounded-circle shadow">
                     <i class=" ni ni-active-40"> </i>
                   </div>
                 </div>
@@ -55,9 +53,7 @@
                 </div>
 
                 <div class=" col-auto">
-                  <div
-                    class=" icon icon-shape bg-gradient-orange text-white rounded-circle shadow"
-                  >
+                  <div class=" icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
                     <i class=" ni ni-chart-pie-35"> </i>
                   </div>
                 </div>
@@ -87,9 +83,7 @@
                 </div>
 
                 <div class=" col-auto">
-                  <div
-                    class=" icon icon-shape bg-gradient-green text-white rounded-circle shadow"
-                  >
+                  <div class=" icon icon-shape bg-gradient-green text-white rounded-circle shadow">
                     <i class=" ni ni-money-coins"> </i>
                   </div>
                 </div>
@@ -119,9 +113,7 @@
                 </div>
 
                 <div class=" col-auto">
-                  <div
-                    class=" icon icon-shape bg-gradient-info text-white rounded-circle shadow"
-                  >
+                  <div class=" icon icon-shape bg-gradient-info text-white rounded-circle shadow">
                     <i class=" ni ni-chart-bar-32"> </i>
                   </div>
                 </div>
@@ -156,66 +148,34 @@
 
             <div class="col">
               <ul class="nav nav-pills justify-content-end">
-                <li
-                  class="nav-item mr-2 mr-md-0"
-                  data-toggle="chart"
-                  data-target="#chart-sales"
-                  (click)="data = datasets[0]; updateOptions()"
-                >
-                  <a
-                    href="javascript:void(0)"
-                    class="nav-link py-2 px-3 bg-primary"
-                    [ngClass]="{ active: clicked === true }"
-                    data-toggle="tab"
-                  >
+                <li class="nav-item mr-2 mr-md-0" data-toggle="chart" data-target="#chart-sales"
+                  (click)="data = datasets[0]; updateOptions()">
+                  <a href="javascript:void(0)" class="nav-link py-2 px-3 bg-primary"
+                    [ngClass]="{ active: clicked === true }" data-toggle="tab">
                     <span class="d-none d-md-block text-white">Tahun</span>
                     <span class="d-md-none">Y</span>
                   </a>
                 </li>
-                <li
-                  class="nav-item"
-                  data-toggle="chart"
-                  data-target="#chart-sales"
-                >
-                  <a
-                    href="javascript:void(0)"
-                    class="nav-link py-2 px-3 bg-primary"
-                    [ngClass]="{ active: clicked1 === true }"
-                    data-toggle="tab"
-                    (click)="clicked = false; clicked1 = true"
-                  >
+                <li class="nav-item" data-toggle="chart" data-target="#chart-sales">
+                  <a href="javascript:void(0)" class="nav-link py-2 px-3 bg-primary"
+                    [ngClass]="{ active: clicked1 === true }" data-toggle="tab"
+                    (click)="clicked = false; clicked1 = true">
                     <span class="d-none d-md-block text-white">Bulan</span>
                     <span class="d-md-none">M</span>
                   </a>
                 </li>
-                <li
-                  class="nav-item mr-2 mr-md-0"
-                  data-toggle="chart"
-                  data-target="#chart-sales"
-                  (click)="data = datasets[0]; updateOptions()"
-                >
-                  <a
-                    href="javascript:void(0)"
-                    class="nav-link py-2 px-3 bg-primary"
-                    [ngClass]="{ active: clicked === true }"
-                    data-toggle="tab"
-                  >
+                <li class="nav-item mr-2 mr-md-0" data-toggle="chart" data-target="#chart-sales"
+                  (click)="data = datasets[0]; updateOptions()">
+                  <a href="javascript:void(0)" class="nav-link py-2 px-3 bg-primary"
+                    [ngClass]="{ active: clicked === true }" data-toggle="tab">
                     <span class="d-none d-md-block text-white">Minggu</span>
                     <span class="d-md-none">w</span>
                   </a>
                 </li>
-                <li
-                  class="nav-item mr-2 mr-md-0"
-                  data-toggle="chart"
-                  data-target="#chart-sales"
-                  (click)="data = datasets[0]; updateOptions()"
-                >
-                  <a
-                    href="javascript:void(0)"
-                    class="nav-link py-2 px-3 bg-primary"
-                    [ngClass]="{ active: clicked === true }"
-                    data-toggle="tab"
-                  >
+                <li class="nav-item mr-2 mr-md-0" data-toggle="chart" data-target="#chart-sales"
+                  (click)="data = datasets[0]; updateOptions()">
+                  <a href="javascript:void(0)" class="nav-link py-2 px-3 bg-primary"
+                    [ngClass]="{ active: clicked === true }" data-toggle="tab">
                     <span class="d-none d-md-block text-white">Hari</span>
                     <span class="d-md-none">D</span>
                   </a>
@@ -225,17 +185,8 @@
           </div>
         </div>
 
-        <div class=" card-body">
-          <div class=" chart">
-            <fusioncharts
-            [width]="width"
-            [height]="height"
-            [type]="typeChartOne"
-            [dataFormat]="dataFormat"
-            [dataSource]="dataSourceChartOne"
-            >
-            </fusioncharts>
-          </div>
+        <div style="height: 410px; padding-top: 10px">
+          <div id="chartdiv" style="width: 100%; height: 100%"></div>
         </div>
       </div>
     </div>
@@ -262,7 +213,7 @@
   </div>
 
   <div class="row">
-    <div class=" col-xl-4">
+    <div class=" col-xl-6">
       <div class=" card">
         <div class=" card-header bg-secondary">
           <div class=" row align-items-center">
@@ -274,22 +225,13 @@
           </div>
         </div>
 
-        <div class=" card-body">
-          <div class=" chart">
-            <fusioncharts
-            [width]="width"
-            [height]="height"
-            [type]="typeChartTwo"
-            [dataFormat]="dataFormat"
-            [dataSource]="dataSourceChartTwo"
-            >
-            </fusioncharts>
-          </div>
+        <div style="height: 410px; padding-top: 10px">
+          <div id="chartdiv1" style="width: 100%; height: 100%"></div>
         </div>
       </div>
     </div>
-    
-    <div class="col-xl-8">
+
+    <div class="col-xl-6">
       <div class="card">
         <div class="card-header bg-secondary">
           <div class="row align-items-center">
@@ -299,88 +241,14 @@
               <h5 class="h3 mb-0">Top 5 Jabatan</h5>
             </div>
 
-            <div class="col">
-              <ul class="nav nav-pills justify-content-end">
-                <li
-                  class="nav-item mr-2 mr-md-0"
-                  data-toggle="chart"
-                  data-target="#chart-sales"
-                  (click)="data = datasets[0]; updateOptions()"
-                >
-                  <a
-                    href="javascript:void(0)"
-                    class="nav-link py-2 px-3 bg-primary"
-                    [ngClass]="{ active: clicked === true }"
-                    data-toggle="tab"
-                  >
-                    <span class="d-none d-md-block text-white">Tahun</span>
-                    <span class="d-md-none">Y</span>
-                  </a>
-                </li>
-                <li
-                  class="nav-item"
-                  data-toggle="chart"
-                  data-target="#chart-sales"
-                >
-                  <a
-                    href="javascript:void(0)"
-                    class="nav-link py-2 px-3 bg-primary"
-                    [ngClass]="{ active: clicked1 === true }"
-                    data-toggle="tab"
-                    (click)="clicked = false; clicked1 = true"
-                  >
-                    <span class="d-none d-md-block text-white">Bulan</span>
-                    <span class="d-md-none">M</span>
-                  </a>
-                </li>
-                <li
-                  class="nav-item mr-2 mr-md-0"
-                  data-toggle="chart"
-                  data-target="#chart-sales"
-                  (click)="data = datasets[0]; updateOptions()"
-                >
-                  <a
-                    href="javascript:void(0)"
-                    class="nav-link py-2 px-3 bg-primary"
-                    [ngClass]="{ active: clicked === true }"
-                    data-toggle="tab"
-                  >
-                    <span class="d-none d-md-block text-white">Minggu</span>
-                    <span class="d-md-none">w</span>
-                  </a>
-                </li>
-                <li
-                  class="nav-item mr-2 mr-md-0"
-                  data-toggle="chart"
-                  data-target="#chart-sales"
-                  (click)="data = datasets[0]; updateOptions()"
-                >
-                  <a
-                    href="javascript:void(0)"
-                    class="nav-link py-2 px-3 bg-primary"
-                    [ngClass]="{ active: clicked === true }"
-                    data-toggle="tab"
-                  >
-                    <span class="d-none d-md-block text-white">Hari</span>
-                    <span class="d-md-none">D</span>
-                  </a>
-                </li>
-              </ul>
+            <div class="col-auto">
+
             </div>
           </div>
         </div>
 
-        <div class=" card-body">
-          <div class=" chart">
-            <fusioncharts
-            [width]="width"
-            [height]="height"
-            [type]="typeChartThree"
-            [dataFormat]="dataFormat"
-            [dataSource]="dataSourceChartThree"
-            >
-            </fusioncharts>
-          </div>
+        <div style="height: 410px; padding-top: 10px">
+          <div id="chartdiv2" style="width: 100%; height: 100%"></div>
         </div>
       </div>
     </div>
@@ -391,13 +259,13 @@
 
     <div class=" col-xl-4">
       <div class=" card">
-        <div class=" card-header bg-secondary"><h5 class=" h3 mb-0">Senarai Kerja</h5></div>
+        <div class=" card-header bg-secondary">
+          <h5 class=" h3 mb-0">Senarai Kerja</h5>
+        </div>
 
         <div class=" card-body p-0">
           <ul class=" list-group list-group-flush" data-toggle="checklist">
-            <li
-              class=" checklist-entry list-group-item flex-column align-items-start py-4 px-4"
-            >
+            <li class=" checklist-entry list-group-item flex-column align-items-start py-4 px-4">
               <div class=" checklist-item checklist-item-success">
                 <div class=" checklist-info">
                   <h5 class=" checklist-title mb-0">Telefon JKR</h5>
@@ -406,15 +274,8 @@
                 </div>
 
                 <div>
-                  <div
-                    class=" custom-control custom-checkbox custom-checkbox-success"
-                  >
-                    <input
-                      checked="checked"
-                      class=" custom-control-input"
-                      id="chk-todo-task-1"
-                      type="checkbox"
-                    />
+                  <div class=" custom-control custom-checkbox custom-checkbox-success">
+                    <input checked="checked" class=" custom-control-input" id="chk-todo-task-1" type="checkbox" />
 
                     <label class=" custom-control-label" for="chk-todo-task-1">
                     </label>
@@ -423,9 +284,7 @@
               </div>
             </li>
 
-            <li
-              class=" checklist-entry list-group-item flex-column align-items-start py-4 px-4"
-            >
+            <li class=" checklist-entry list-group-item flex-column align-items-start py-4 px-4">
               <div class=" checklist-item checklist-item-warning">
                 <div class=" checklist-info">
                   <h5 class=" checklist-title mb-0">Mesyuarat dengan PDRM</h5>
@@ -434,14 +293,26 @@
                 </div>
 
                 <div>
-                  <div
-                    class=" custom-control custom-checkbox custom-checkbox-warning"
-                  >
-                    <input
-                      class=" custom-control-input"
-                      id="chk-todo-task-2"
-                      type="checkbox"
-                    />
+                  <div class=" custom-control custom-checkbox custom-checkbox-warning">
+                    <input class=" custom-control-input" id="chk-todo-task-2" type="checkbox" />
+
+                    <label class=" custom-control-label" for="chk-todo-task-2">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class=" checklist-entry list-group-item flex-column align-items-start py-4 px-4">
+              <div class=" checklist-item checklist-item-warning">
+                <div class=" checklist-info">
+                  <h5 class=" checklist-title mb-0">Mesyuarat dengan JKR</h5>
+
+                  <small> 10:45 AM </small>
+                </div>
+
+                <div>
+                  <div class=" custom-control custom-checkbox custom-checkbox-warning">
+                    <input class=" custom-control-input" id="chk-todo-task-2" type="checkbox" />
 
                     <label class=" custom-control-label" for="chk-todo-task-2">
                     </label>
@@ -456,7 +327,9 @@
 
     <div class=" col-xl-4">
       <div class=" card">
-        <div class=" card-header bg-secondary"><h5 class=" h3 mb-0">Trek Aduan</h5></div>
+        <div class=" card-header bg-secondary">
+          <h5 class=" h3 mb-0">Trek Aduan</h5>
+        </div>
 
         <div class=" card-body">
           <ul class=" list-group list-group-flush list my--3">
@@ -512,6 +385,56 @@
               </div>
             </li>
           </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-4">
+      <div class="card">
+        <div class=" card-header bg-secondary">
+          <h5 class=" h3 mb-0">Rating Jabatan</h5>
+        </div>
+        <div class=" table-responsive">
+          <table class=" table align-items-center table-flush">
+            <thead class=" thead-light">
+              <tr>
+                <th scope="col">Jabatan</th>
+                <th scope="col">Aduan</th>
+                <th scope="col">Rating</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row">Jabatan A</th>
+                <td>4569</td>
+                <td>
+                  <i class=" fas fa-arrow-up text-success mr-3"> </i> 46.53%
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Jabatan B</th>
+                <td>2131</td>
+                <td>
+                  <i class=" fas fa-arrow-down  text-danger mr-3"> </i> 6.53%
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Jabatan C</th>
+                <td>1231</td>
+                <td>
+                  <i class=" fas fa-arrow-up text-success mr-3"> </i> 25.33%
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Jabatan E</th>
+                <td>2131</td>
+                <td>
+                  <i class=" fas fa-arrow-down  text-danger mr-3"> </i> 2.49%
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
